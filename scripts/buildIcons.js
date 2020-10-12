@@ -94,7 +94,6 @@ async function exists(f) {
     await fs.access(f);
     return true;
   } catch (e) {
-    if (e.code === 'ENOENT') return false;
-    else throw e;
+    if (e.code === 'ENOENT') {return false;} else {throw e;}
   }
 }

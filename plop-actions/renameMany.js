@@ -19,7 +19,7 @@ const globby = require('globby');
 
 const renameAsync = util.promisify(fs.rename);
 
-module.exports = async function renameMany (data, userConfig, plop) {
+module.exports = async function renameMany(data, userConfig, plop) {
   // shallow-merge default config and input config
   const cfg = Object.assign({
     verbose: true

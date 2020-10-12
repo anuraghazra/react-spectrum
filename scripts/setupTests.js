@@ -27,10 +27,10 @@ import '@testing-library/jest-dom';
  */
 if (!process.env.LISTENING_TO_UNHANDLED_REJECTION) {
   process.on('unhandledRejection', reason => {
-    throw reason
-  })
+    throw reason;
+  });
   // Avoid memory leak by adding too many listeners
-  process.env.LISTENING_TO_UNHANDLED_REJECTION = true
+  process.env.LISTENING_TO_UNHANDLED_REJECTION = true;
 }
 const ERROR_PATTERNS_WE_SHOULD_FIX_BUT_ALLOW = [];
 
